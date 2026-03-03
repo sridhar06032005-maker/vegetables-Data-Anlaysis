@@ -1,0 +1,17 @@
+use vegetables;
+ALTER TABLE `cleaned data vegetables`RENAME TO vegies;
+select * from vegies;
+SELECT COUNT(*) AS total_rows FROM vegies;
+SELECT COUNT(*) AS total_columns FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'vegies';
+SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'vegies';
+SELECT Name, Category, Color FROM vegies;
+SELECT * FROM vegies WHERE Category = 'Root';
+SELECT * FROM vegies WHERE Color = 'Green';
+SELECT * FROM vegies WHERE Season = 'Summer';
+SELECT * FROM vegies WHERE `Shelf_Life_(days)` > 30;
+SELECT * FROM vegies WHERE Origin = 'South America';
+SELECT * FROM vegies WHERE storage_requirements = 'Refrigeration';
+SELECT * FROM vegies ORDER BY `Shelf_Life_(days)` DESC;
+SELECT * FROM vegies ORDER BY Name ASC;
+SELECT Category, COUNT(*) AS total_vegetables FROM vegies GROUP BY Category;
+SELECT AVG(`Shelf_Life_(days)`) AS average_shelf_life FROM vegies;
